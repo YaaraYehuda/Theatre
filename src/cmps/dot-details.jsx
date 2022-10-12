@@ -1,4 +1,4 @@
-
+import { ReactComponent as CloseIcon } from "../assets/images/close.svg"
 
 export const DotDetails = () => {
 
@@ -9,10 +9,9 @@ export const DotDetails = () => {
     }
 
     return <section className="dot-details">
-
+        <span><CloseIcon /></span>
         <h1>Price: {dot.dotPrice}</h1>
-        <h4>Row {dot.i} / Col {dot.j}</h4>
+        <h4> Row {dot.i + 1} / Seat {dot.j + 1}</h4>
         <button className="book-btn">Book</button>
-
     </section>
 }
