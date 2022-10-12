@@ -4,7 +4,7 @@ import { DotList } from "../cmps/dot-list"
 import { dotService } from "../services/dot.service"
 
 export const TheaterApp = () => {
-
+    
     const gCinema = dotService.createCinema(6, 18)
     const [cinema, setCinema] = useState(gCinema)
 
