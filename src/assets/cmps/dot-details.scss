@@ -39,4 +39,15 @@
             background: #0a7b56;
         }
     }
+    .book-btn-reserved{
+        background: #627870;
+        border: 1px solid #556699;
+        border-radius: 1000px;
+        padding: 10px 25px;
+        color: #efeded;
+        display: inline-block;
+        font: normal bold 15px/1 "Open Sans", sans-serif;
+        text-align: center;
+        cursor: pointer;
+    }
 }

@@ -12,6 +12,8 @@ export const DotDetails = () => {
         <span><CloseIcon /></span>
         <h1>Price: {dot.dotPrice}</h1>
         <h4> Row {dot.i + 1} / Seat {dot.j + 1}</h4>
-        <button className="book-btn">Book</button>
+        {dot.isReserved && <span>Seat already reserved</span>}
+        {dot.isReserved && <button className="book-btn-reserved">Book</button>}
+        {!dot.isReserved && <button className="book-btn">Book</button>}
     </section>
 }
