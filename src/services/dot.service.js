@@ -2,42 +2,33 @@
 import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 
-// export const dotService = {
-//     query,
-//     save,
-//     remove,
-//     getById,
-// }
+export const dotService = {
+    createCinema,
+
+}
 
 // const STORAGE_KEY = 'dots'
 
-const gTheatre = createMat()
 
-function createMat(ROWS, COLS) {
+function createCinema(ROWS, COLS) {
     var mat = []
-    for (var i = 0; i < ROWS; i ++){
+    for (var i = 0; i < ROWS; i++) {
         var row = []
         for (var j = 0; j < COLS; j++) {
             let dot = new Dot(i, j)
             row.push(dot)
         }
+        mat.push(row)
     }
     return mat
 }
-
-function getTheatre() {
-    return gTheatre
-}
-
-
-
 class Dot {
     constructor(i, j) {
         this.i = i
-        this.j = j
-        this.price = 40
-        this.isReserved = false,
-        this.isSelected = false
+            this.j = j
+            this.price = 40
+            this.isReserved = false
+            this.isSelected = false
     }
 
     get dotPrice() {
@@ -45,18 +36,18 @@ class Dot {
     }
 
     set dotPrice(newPrice) {
-        if(!isNaN(newPrice)) this.price = newPrice
+        if (!isNaN(newPrice)) this.price = newPrice
         else console.log('Invalid price!')
     }
 
-   toggleSelectDot() {
-    if(this.isReserved) return
-    this.isSelected = !this.isSelected
-   }
+    toggleSelectDot() {
+        if (this.isReserved) return
+        this.isSelected = !this.isSelected
+    }
 
-   reserveDot() {
-    this.isReserved = true
-   }
+    reserveDot() {
+        this.isReserved = true
+    }
 
 }
 
