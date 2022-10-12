@@ -23,12 +23,15 @@ function createCinema(ROWS, COLS) {
     return mat
 }
 class Dot {
+    static nextId = 101
+
     constructor(i, j) {
+        this.id = Dot.nextId++
         this.i = i
-            this.j = j
-            this.price = 40
-            this.isReserved = false
-            this.isSelected = false
+        this.j = j
+        this.price = 40
+        this.isReserved = false
+        this.isSelected = false
     }
 
     get dotPrice() {
