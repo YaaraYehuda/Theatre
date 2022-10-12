@@ -2,41 +2,18 @@
 import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 
-// export const dotService = {
-//     query,
-//     save,
-//     remove,
-//     getById,
-// }
+export const dotService = {
+    createCinema
+}
 
 // const STORAGE_KEY = 'dots'
 
-const gTheatre = createMat()
-
-function createMat(ROWS, COLS) {
-    var mat = []
-    for (var i = 0; i < ROWS; i ++){
-        var row = []
-        for (var j = 0; j < COLS; j++) {
-            let dot = new Dot(i, j)
-            row.push(dot)
-        }
-    }
-    return mat
-}
-
-function getTheatre() {
-    return gTheatre
-}
-
-
-
 class Dot {
     constructor(i, j) {
-        this.i = i
-        this.j = j
+        this.row = i
+        this.col = j
         this.price = 40
-        this.isReserved = false,
+        this.isReserved = false
         this.isSelected = false
     }
 
@@ -59,6 +36,23 @@ class Dot {
    }
 
 }
+
+
+function createCinema(ROWS, COLS, pass) {
+    var mat = []
+    for (var i = 0; i < ROWS; i ++){
+        var row = []
+        for (var j = 0; j < COLS; j++) {
+            let dot = new Dot(i, j)
+            row.push(dot)
+        }
+        mat.push(row)
+    }
+    return mat
+}
+
+
+
 
 // function createDot() {
 //     return {
