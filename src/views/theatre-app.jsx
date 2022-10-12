@@ -5,9 +5,11 @@ import { dotService } from "../services/dot.service"
 
 export const TheaterApp = () => {
     
-    const gCinema = dotService.createCinema(6, 18)
+    const gCinema = dotService.query(6, 18)
     const [cinema, setCinema] = useState(gCinema)
-
+    useEffect(()=> {
+        console.log('re-render')
+    },[cinema])
     console.log('gCinema:', gCinema)
 
 

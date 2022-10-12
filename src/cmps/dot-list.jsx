@@ -8,14 +8,12 @@ export const DotList = ({ rows }) => {
     const [modalOpen, setModalOpen] = useState(null)
 
     const onDotClicked = (dot) => {
-        console.log('dottt:', dot)
         dot.toggleSelectDot()
         if(dot.isSelected) setModalOpen(dot) 
     }
 
     return <table className="table">
             {rows?.map(row => {
-                console.log('row:', row)
                 return <tr key= {utilService.makeId()}>
                     {row.map(dot => {
                         return <td key={dot.id}><div className={dot.isSelected? 'seat-svg-selected' : dot.isReserved? 'seat-svg-booked' : 'seat-svg'}

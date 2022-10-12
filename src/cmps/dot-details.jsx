@@ -2,7 +2,6 @@ import { ReactComponent as CloseIcon } from "../assets/images/close.svg"
 
 
 export const DotDetails = ({dot, closeModal}) => {
-    console.log('dot: ', dot)
     const onBookDot = () => {
         dot.isReserved = true
         closeModal(null)

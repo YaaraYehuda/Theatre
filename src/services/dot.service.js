@@ -3,12 +3,17 @@ import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 
 export const dotService = {
-    createCinema,
+    query,
 
 }
 
 // const STORAGE_KEY = 'dots'
 
+function query(ROWS, COLS) {
+    const cinema = storageService.loadFromStorage('cinema')
+    if(!cinema) return createCinema(ROWS, COLS)
+    return cinema
+}
 
 function createCinema(ROWS, COLS) {
     var mat = []
