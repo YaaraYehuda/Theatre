@@ -2,7 +2,7 @@ import { AppHeader } from "./cmps/app-header";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App main-container">
       <AppHeader />
     </div>
   );
