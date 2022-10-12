@@ -19,6 +19,7 @@ function makeId(length = 6) {
     return txt
 }
 
+
 // console.log('make lorem', makeLorem())
 
 function makeLorem(size = 100) {
