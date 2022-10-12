@@ -12,11 +12,9 @@ export const TheaterApp = () => {
 
 
     return <section className="theater-app full">
-        <h5>Choose a sit</h5>
+        <h5>Choose a seat</h5>
         <section className="theater-container main-container">
-
-                    <DotList rows={gCinema} />
- 
+            <DotList rows={gCinema} />
         </section>
 
     </section>
