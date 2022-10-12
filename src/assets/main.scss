@@ -1,0 +1,17 @@
+//setup
+@import "setup/variables";
+@import "setup/mixins";
+@import "setup/typography";
+
+//basics
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+
+
+//views
+@import "views/home-page";
+
+//components
+@import "cmps/app-header";
+@import "cmps/footer.scss";
